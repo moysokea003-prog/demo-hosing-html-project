@@ -1,0 +1,19 @@
+.board{
+  display:grid;
+  grid-template-columns:repeat(3,1fr); /* ៣ ជួរឈរ */
+  gap:10px;
+}
+.die{
+  width:90px; height:90px;
+  border:3px solid red;
+  border-radius:18px;
+  font-size:3rem;
+  display:flex; align-items:center; justify-content:center;
+}
+/* គ្រាប់ឡុកឡាក់ញ័រពេលបោះ */
+.die.roll{ animation:shake .12s infinite; }
+@keyframes shake{
+  0%{transform:rotate(-8deg)}
+  50%{transform:rotate(8deg)}
+  100%{transform:rotate(-8deg)}
+}
